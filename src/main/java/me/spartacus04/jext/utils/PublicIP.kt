@@ -12,14 +12,15 @@ internal class PublicIP {
     fun getIP(consumer: (String) -> Unit) {
         SCHEDULER.runTaskAsynchronously {
             try {
+            var text = ""
                 if (CONFIG.CUSTOM_PUBLIC_IP == "") {
                     val reader = BufferedReader(InputStreamReader(URI("https://api.ipify.org/").toURL().openStream()))
-                    val text = reader.use {
+                    text = reader.use {
                         it.readText()
                     }
                 }
                 else {
-                    val text = CONFIG.CUSTOM_PUBLIC_IP
+                    text = CONFIG.CUSTOM_PUBLIC_IP
                 }
 
                 consumer(text)
