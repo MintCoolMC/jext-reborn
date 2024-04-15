@@ -19,7 +19,7 @@ internal class PublicIP {
                     }
                 }
                 else {
-                    consumer(CONFIG.CUSTOM_PUBLIC_IP)
+                    val text = CONFIG.CUSTOM_PUBLIC_IP
                 }
 
                 consumer(text)
