@@ -320,6 +320,10 @@
     "web-interface-password": {
       "type": "string",
       "description": "The password required to access the web interface api."
+    },
+    "custom-public-ip": {
+      "type": "string",
+      "description": "Custom your server ip"
     }
   },
   "required": [
@@ -336,6 +340,7 @@
     "enable-resource-pack-host",
     "web-interface-port",
     "web-interface-api-enabled",
-    "web-interface-password"
+    "web-interface-password",
+    "custom-public-ip"
   ]
 }

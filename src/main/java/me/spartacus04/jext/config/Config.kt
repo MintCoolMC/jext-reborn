@@ -55,4 +55,7 @@ data class Config(
 
     @SerializedName("web-interface-password")
     var WEB_INTERFACE_PASSWORD : String = "",
+
+    @SerializedName("custom-public-ip")
+    var CUSTOM_PUBLIC_IP : String = "",
 ) : FileBind("config.json", object : TypeToken<Config>() {})
