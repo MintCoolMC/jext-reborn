@@ -25,7 +25,8 @@ internal object ConfigFactory {
             "\"enable-resource-pack-host\"",
             "\"web-interface-port\"",
             "\"web-interface-api-enabled\"",
-            "\"web-interface-password\""
+            "\"web-interface-password\"",
+            "\"custom-public-ip\""
         )
 
         if(currentConfigParams.all { text.contains(it) }) return

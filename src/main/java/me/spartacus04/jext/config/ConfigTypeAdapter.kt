@@ -40,6 +40,7 @@ internal class ConfigTypeAdapter : TypeAdapter<Config>() {
                 "web-interface-port" -> config.WEB_INTERFACE_PORT = reader.nextInt()
                 "web-interface-api-enabled" -> config.WEB_INTERFACE_API_ENABLED = reader.nextBoolean()
                 "web-interface-password" -> config.WEB_INTERFACE_PASSWORD = reader.nextString()
+                "custom-public-ip" -> config.CUSTOM_PUBLIC_IP = reader.nextString()
                 else -> reader.skipValue()
             }
         }
@@ -77,6 +78,7 @@ internal class ConfigTypeAdapter : TypeAdapter<Config>() {
         writer.name("web-interface-port").value(value.WEB_INTERFACE_PORT)
         writer.name("web-interface-api-enabled").value(value.WEB_INTERFACE_API_ENABLED)
         writer.name("web-interface-password").value(value.WEB_INTERFACE_PASSWORD)
+        writer.name("custom-public-ip").value(value.CUSTOM_PUBLIC_IP)
 
         writer.endObject()
     }

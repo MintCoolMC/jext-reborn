@@ -28,5 +28,7 @@
 
   "web-interface-api-enabled": true,
 
-  "web-interface-password": ""
+  "web-interface-password": "",
+
+  "custom-public-ip": ""
 }

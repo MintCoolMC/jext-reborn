@@ -132,6 +132,13 @@ internal class ConfigReadHandler : JextHttpHandler(true) {
                 "description": "The password required to access the web interface api.",
                 "value": "${CONFIG.WEB_INTERFACE_PASSWORD}",
                 "defaultValue": ""
+            },
+            {
+                "name": "Server public ip",
+                "id": "custom-public-ip",
+                "description": "public ip",
+                "value": "${CONFIG.CUSTOM_PUBLIC_IP}",
+                "defaultValue": ""
             }
         ]
         """.trimIndent()
