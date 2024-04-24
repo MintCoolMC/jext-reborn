@@ -17,14 +17,18 @@ import java.net.InetAddress
 internal class PlayerJoinEvent : JextListener() {
     @EventHandler
     fun onPlayerJoin(playerJoinEvent: PlayerJoinEvent) {
-        if(CONFIG.WEB_INTERFACE_API_ENABLED && CONFIG.RESOURCE_PACK_HOST) {
+        if(CONFIG.WEB_INTERFACE_API_ENABLED && CONFIG.RESOURCE_PACK_HOST && CONFIG.RESOURCE_PACK_DOWNLOAD) {
             val hostName = if(playerJoinEvent.player.address == InetAddress.getLocalHost()) {
                 "http://localhost"
             } else {
                 "http://$PUBLIC_IP"
             }
 
-            playerJoinEvent.player.setResourcePack("${hostName}:${CONFIG.WEB_INTERFACE_PORT}/resource-pack.zip")
+            if (CONFIG.RESOURCE_PACK_DOWNLOAD_URL == "") {
+                playerJoinEvent.player.setResourcePack("${hostName}:${CONFIG.WEB_INTERFACE_PORT}/resource-pack.zip")
+            } else {
+                playerJoinEvent.player.setResourcePack(CONFIG.RESOURCE_PACK_DOWNLOAD_URL)
+            }
         }
 
         if (playerJoinEvent.player.hasPermission("jext.notifyupdate") && CONFIG.CHECK_FOR_UPDATES) {

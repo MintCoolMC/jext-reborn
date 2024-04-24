@@ -58,4 +58,10 @@ data class Config(
 
     @SerializedName("custom-public-ip")
     var CUSTOM_PUBLIC_IP : String = "",
+
+    @SerializedName("enable-resource-pack-download")
+    var RESOURCE_PACK_DOWNLOAD : Boolean = true,
+
+    @SerializedName("resource-pack-download-url")
+    var RESOURCE_PACK_DOWNLOAD_URL : String = "",
 ) : FileBind("config.json", object : TypeToken<Config>() {})

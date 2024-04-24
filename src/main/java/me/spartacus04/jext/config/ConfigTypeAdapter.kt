@@ -41,6 +41,8 @@ internal class ConfigTypeAdapter : TypeAdapter<Config>() {
                 "web-interface-api-enabled" -> config.WEB_INTERFACE_API_ENABLED = reader.nextBoolean()
                 "web-interface-password" -> config.WEB_INTERFACE_PASSWORD = reader.nextString()
                 "custom-public-ip" -> config.CUSTOM_PUBLIC_IP = reader.nextString()
+                "enable-resource-pack-download" -> config.RESOURCE_PACK_DOWNLOAD = reader.nextBoolean()
+                "resource-pack-download-url" -> config.RESOURCE_PACK_DOWNLOAD_URL = reader.nextString()
                 else -> reader.skipValue()
             }
         }
@@ -79,6 +81,8 @@ internal class ConfigTypeAdapter : TypeAdapter<Config>() {
         writer.name("web-interface-api-enabled").value(value.WEB_INTERFACE_API_ENABLED)
         writer.name("web-interface-password").value(value.WEB_INTERFACE_PASSWORD)
         writer.name("custom-public-ip").value(value.CUSTOM_PUBLIC_IP)
+        writer.name("enable-resource-pack-download").value(value.RESOURCE_PACK_DOWNLOAD)
+        writer.name("resource-pack-download-url").value(value.RESOURCE_PACK_DOWNLOAD_URL)
 
         writer.endObject()
     }

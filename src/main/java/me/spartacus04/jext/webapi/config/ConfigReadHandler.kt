@@ -136,8 +136,22 @@ internal class ConfigReadHandler : JextHttpHandler(true) {
             {
                 "name": "Server public ip",
                 "id": "custom-public-ip",
-                "description": "public ip",
+                "description": "Custom your server ip",
                 "value": "${CONFIG.CUSTOM_PUBLIC_IP}",
+                "defaultValue": ""
+            },
+            {
+                "name": "Enable resource pack download",
+                "id": "enable-resource-pack-download",
+                "description": "If set to true, the plugin will host the resource pack and automatically send it to players.",
+                "value": "${CONFIG.RESOURCE_PACK_DOWNLOAD}",
+                "defaultValue": true
+            },
+            {
+                "name": "Resource pack download url",
+                "id": "resource-pack-download-url",
+                "description": "Custom resource pack download url",
+                "value": "${CONFIG.RESOURCE_PACK_DOWNLOAD_URL}",
                 "defaultValue": ""
             }
         ]

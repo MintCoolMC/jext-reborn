@@ -324,6 +324,15 @@
     "custom-public-ip": {
       "type": "string",
       "description": "Custom your server ip"
+    },
+    "enable-resource-pack-download": {
+      "type": "boolean",
+      "description": "If set to true, the plugin will host the resource pack and automatically send it to players.",
+      "default": true
+    },
+    "resource-pack-download-url": {
+      "type": "string",
+      "description": "Custom resource pack download url"
     }
   },
   "required": [
@@ -341,6 +350,8 @@
     "web-interface-port",
     "web-interface-api-enabled",
     "web-interface-password",
-    "custom-public-ip"
+    "custom-public-ip",
+    "enable-resource-pack-download",
+    "resource-pack-download-url"
   ]
 }

@@ -30,5 +30,7 @@
 
   "web-interface-password": "",
 
-  "custom-public-ip": ""
+  "custom-public-ip": "",
+
+  "enable-resource-pack-download": true
 }
